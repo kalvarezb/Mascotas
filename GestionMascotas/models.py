@@ -12,3 +12,6 @@ class Mascota(models.Model):
     fechaRescate = models.DateField()
     estados = (('Disponible', 'Disponible'), ('Rescatado', 'Rescatado'), ('Adoptado', 'Adoptado'))
     estado = models.CharField(max_length=10, choices=estados, default='Rescatado')
+
+    def __str__(self):
+        return self.nombre
